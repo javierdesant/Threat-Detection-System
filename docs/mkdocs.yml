@@ -1,0 +1,64 @@
+site_name: Threat Detection System
+site_description: Documentation for the edge-computing threat detection sensor network.
+site_url: https://javierdesant.github.io/Threat-Detection-System/
+repo_url: https://github.com/javierdesant/Threat-Detection-System
+repo_name: Threat-Detection-System
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Overview: getting-started/overview.md
+      - Installation: getting-started/installation.md
+  - Tasks:
+      - "Task 1 — Sensor Nodes & PXE Boot": tasks/task-01-sensor-nodes.md
+      - "Task 2 — HPL Performance": tasks/task-02-hpl.md
+      - "Task 3 — MPI Cluster": tasks/task-03-mpi.md
+      - "Task 4 — Non-MPI Scaling Laws": tasks/task-04-scaling-laws.md
+      - "Task 5 — Monitoring": tasks/task-05-monitoring.md
+      - "Task 6 — Image Collection & Training": tasks/task-06-model-training.md
+      - "Task 7 — Backend": tasks/task-07-backend.md
+      - "Task 8 — Frontend": tasks/task-08-frontend.md
+      - "Task 9 — Telegram Notifications": tasks/task-09-telegram.md
+  - Architecture: architecture.md
